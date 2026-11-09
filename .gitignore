@@ -1,0 +1,26 @@
+# Build artifacts
+build/
+bin/
+obj/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.d
+
+# QEMU and test logs
+*.log
+qemu_uart.log
+.gdb_history
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,56 @@
+name: Silicon Bringup CI/CD
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    name: Build & Silicon Bringup Regression
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [arm, riscv]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Toolchains and QEMU Emulators
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            gcc-arm-none-eabi \
+            gcc-riscv64-unknown-elf \
+            qemu-system-arm \
+            qemu-system-misc \
+            python3 \
+            python3-pip
+
+      - name: Build Bare-Metal Firmware (${{ matrix.arch }})
+        run: |
+          make ARCH=${{ matrix.arch }}
+
+      - name: Run QEMU Headless Qualification Run (${{ matrix.arch }})
+        run: |
+          if [ "${{ matrix.arch }}" = "arm" ]; then
+            timeout 15s qemu-system-arm -M mps2-an385 -cpu cortex-m3 -nographic -serial file:qemu_uart.log -kernel build/arm/baremetal_soc_arm.elf || true
+          else
+            timeout 15s qemu-system-riscv32 -M virt -bios none -nographic -serial file:qemu_uart.log -kernel build/riscv/baremetal_soc_riscv.elf || true
+          fi
+          cat qemu_uart.log || true
+
+      - name: Run Host Simulation & Python Verification Harness
+        run: |
+          python3 scripts/verification/run_bringup_regression.py
+
+      - name: Archive Test Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-reports-${{ matrix.arch }}
+          path: docs/test_report.md
