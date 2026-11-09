@@ -17,24 +17,24 @@ The **`baremetal-soc-bringup-suite`** addresses this critical hardware-software 
 
 ```mermaid
 flowchart TD
-    subgraph PowerOn [Phase 1: Boot & Hardware Reset]
-        POR[Power-On Reset / NRST] --> ResetHandler[arch/arm/startup_arm.s\narch/riscv/startup_riscv.S]
-        ResetHandler --> StackInit[Initialize SP / Trap Vector]
-        ResetHandler --> CRuntimeInit[Copy .data (ROM -> RAM)\nZero .bss Section]
+    subgraph PowerOn ["Phase 1: Boot & Hardware Reset"]
+        POR["Power-On Reset / NRST"] --> ResetHandler["arch/arm/startup_arm.s<br/>arch/riscv/startup_riscv.S"]
+        ResetHandler --> StackInit["Initialize SP / Trap Vector"]
+        ResetHandler --> CRuntimeInit["Copy .data (ROM to RAM)<br/>Zero .bss Section"]
     end
 
-    subgraph SiliconQual [Phase 2-7: Automated Silicon Qualification]
-        CRuntimeInit --> ClockInit[RCC: HSI/HSE & PLL Lock Guard]
-        ClockInit --> MemDiag[Memory Subsystem Diagnostics\nWalking 1s/0s, March C-, LFSR]
-        MemDiag --> BusFabric[Bus Fabric & MPU/PMP Protection]
-        BusFabric --> PeriphDiag[Peripheral Subsystems\nUART, Timer, GPIO, SPI, I2C, WDT, DMA]
-        PeriphDiag --> IrqDiag[NVIC / PLIC & Trap Latency Benchmark]
-        IrqDiag --> StressBurnIn[Concurrent CPU March C- + DMA Contention]
+    subgraph SiliconQual ["Phase 2-7: Automated Silicon Qualification"]
+        CRuntimeInit --> ClockInit["RCC: HSI/HSE & PLL Lock Guard"]
+        ClockInit --> MemDiag["Memory Subsystem Diagnostics<br/>Walking 1s/0s, March C-, LFSR"]
+        MemDiag --> BusFabric["Bus Fabric & MPU/PMP Protection"]
+        BusFabric --> PeriphDiag["Peripheral Subsystems<br/>UART, Timer, GPIO, SPI, I2C, WDT, DMA"]
+        PeriphDiag --> IrqDiag["NVIC / PLIC & Trap Latency Benchmark"]
+        IrqDiag --> StressBurnIn["Concurrent CPU March C- + DMA Contention"]
     end
 
-    subgraph UserInterface [Interactive Silicon Monitor]
-        StressBurnIn --> ReportGen[Qualification Report Table & Metrics]
-        ReportGen --> Shell[Interactive UART Bringup Shell\npeek, poke, dump, fill, mtest, diag]
+    subgraph UserInterface ["Interactive Silicon Monitor"]
+        StressBurnIn --> ReportGen["Qualification Report Table & Metrics"]
+        ReportGen --> Shell["Interactive UART Bringup Shell<br/>peek, poke, dump, fill, mtest, diag"]
     end
 ```
 
