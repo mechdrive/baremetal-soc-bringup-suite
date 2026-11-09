@@ -113,3 +113,4 @@ void uart_set_loopback(uintptr_t base_addr, bool enable);
 #endif
 
 #endif /* UART_H */
+

@@ -91,3 +91,4 @@ void spi_set_loopback(uintptr_t base_addr, bool enable)
         mmio_clear_bits32(base_addr + SPI_CR1_OFFSET, SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE);
     }
 }
+

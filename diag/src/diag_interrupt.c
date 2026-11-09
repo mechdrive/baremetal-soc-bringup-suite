@@ -183,3 +183,4 @@ void diag_interrupt_register_all(void)
     };
     bringup_register_test(&tc_mpu);
 }
+

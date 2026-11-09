@@ -66,3 +66,4 @@ void wdt_force_reset_test(uintptr_t base_addr)
         __asm__ volatile ("" ::: "memory");
     }
 }
+

@@ -165,3 +165,4 @@ void diag_dump_hex(const char *tag, uintptr_t addr, const void *data, size_t len
 #endif
 
 #endif /* BRINGUP_FRAMEWORK_H */
+

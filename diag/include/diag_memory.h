@@ -40,3 +40,4 @@ void diag_memory_register_all(void);
 #endif
 
 #endif /* DIAG_MEMORY_H */
+

@@ -57,3 +57,4 @@ void wdt_force_reset_test(uintptr_t base_addr);
 #endif
 
 #endif /* WDT_H */
+

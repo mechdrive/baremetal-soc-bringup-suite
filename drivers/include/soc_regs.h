@@ -275,3 +275,4 @@
 #define DMA_STATUS_ERROR        (1U << 2)
 
 #endif /* SOC_REGS_H */
+

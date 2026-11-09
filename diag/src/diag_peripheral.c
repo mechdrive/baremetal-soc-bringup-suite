@@ -292,3 +292,4 @@ void diag_peripheral_register_all(void)
     };
     bringup_register_test(&tc_dma);
 }
+

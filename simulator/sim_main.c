@@ -68,3 +68,4 @@ int main(int argc, char **argv)
     sim_soc_destroy();
     return (fail_count == 0) ? 0 : 1;
 }
+

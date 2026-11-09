@@ -100,3 +100,4 @@ void dma_abort(uintptr_t base_addr, uint8_t channel);
 #endif
 
 #endif /* DMA_H */
+

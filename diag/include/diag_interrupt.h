@@ -27,3 +27,4 @@ void diag_interrupt_register_all(void);
 #endif
 
 #endif /* DIAG_INTERRUPT_H */
+

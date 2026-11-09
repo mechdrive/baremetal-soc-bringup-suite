@@ -83,3 +83,4 @@ void spi_set_loopback(uintptr_t base_addr, bool enable);
 #endif
 
 #endif /* SPI_H */
+

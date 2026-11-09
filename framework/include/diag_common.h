@@ -71,3 +71,4 @@ typedef struct {
 #endif
 
 #endif /* DIAG_COMMON_H */
+

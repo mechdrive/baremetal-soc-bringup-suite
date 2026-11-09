@@ -192,3 +192,4 @@ void bringup_get_stats(bringup_stats_t *stats)
         *stats = s_stats;
     }
 }
+

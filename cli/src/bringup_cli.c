@@ -343,3 +343,4 @@ void bringup_cli_run_interactive(void)
         bringup_cli_poll();
     }
 }
+

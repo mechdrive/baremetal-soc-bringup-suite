@@ -33,3 +33,4 @@ void diag_peripheral_register_all(void);
 #endif
 
 #endif /* DIAG_PERIPHERAL_H */
+

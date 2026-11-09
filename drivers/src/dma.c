@@ -103,3 +103,4 @@ void dma_abort(uintptr_t base_addr, uint8_t channel)
     uint32_t ch_base = base_addr + DMA_CH0_CTRL_OFFSET + ((uint32_t)channel * 0x20);
     mmio_clear_bits32(ch_base, DMA_CTRL_EN);
 }
+

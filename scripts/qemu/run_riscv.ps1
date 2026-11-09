@@ -20,3 +20,4 @@ Write-Host "=================================================================="
     -nographic `
     -serial mon:stdio `
     -kernel $ElfImage
+

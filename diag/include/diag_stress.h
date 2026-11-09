@@ -25,3 +25,4 @@ void diag_stress_register_all(void);
 #endif
 
 #endif /* DIAG_STRESS_H */
+

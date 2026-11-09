@@ -150,3 +150,4 @@ void SysTick_Handler(void)
         timer_clear_irq(s_timer_base);
     }
 }
+

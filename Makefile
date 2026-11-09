@@ -152,3 +152,4 @@ help:
 	@echo "  make sim             : Build & run host virtual SoC simulation"
 	@echo "  make test            : Run full automated Python regression"
 	@echo "  make clean           : Remove build artifacts"
+

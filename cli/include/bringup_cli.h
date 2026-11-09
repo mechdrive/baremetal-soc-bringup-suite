@@ -46,3 +46,4 @@ void bringup_cli_run_interactive(void);
 #endif
 
 #endif /* BRINGUP_CLI_H */
+

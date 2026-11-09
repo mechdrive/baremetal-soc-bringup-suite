@@ -427,3 +427,4 @@ void sim_mmio_write8(uintptr_t addr, uint8_t val)
     word = (word & ~mask) | ((uint32_t)val << shift);
     sim_mmio_write32(addr & ~3UL, word);
 }
+

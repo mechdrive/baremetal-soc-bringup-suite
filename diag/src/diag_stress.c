@@ -124,3 +124,4 @@ void diag_stress_register_all(void)
     };
     bringup_register_test(&tc_bw);
 }
+

@@ -64,3 +64,4 @@ typedef struct {
 void riscv_trap_handler_c(riscv_trap_frame_t *frame);
 
 #endif /* CPU_RISCV_H */
+

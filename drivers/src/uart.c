@@ -215,3 +215,4 @@ void uart_set_loopback(uintptr_t base_addr, bool enable)
     mmio_write32(base_addr + UART_CR_OFFSET, cr);
 #endif
 }
+

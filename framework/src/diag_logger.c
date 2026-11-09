@@ -90,3 +90,4 @@ void diag_dump_hex(const char *tag, uintptr_t addr, const void *data, size_t len
         diag_log_raw(line);
     }
 }
+

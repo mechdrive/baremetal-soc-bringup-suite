@@ -31,3 +31,4 @@ class SoCInspect(gdb.Command):
 
 SoCInspect()
 print("[GDB-EXT] Loaded 'soc-inspect' command successfully.")
+

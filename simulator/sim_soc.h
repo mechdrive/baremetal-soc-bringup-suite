@@ -47,3 +47,4 @@ void sim_soc_inject_irq(uint32_t irq_num);
 #endif
 
 #endif /* SIM_SOC_H */
+

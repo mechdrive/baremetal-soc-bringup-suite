@@ -95,3 +95,4 @@ void rcc_disable_peripheral_clock(uintptr_t base_addr, uint32_t bus_reg_offset, 
 #endif
 
 #endif /* RCC_H */
+

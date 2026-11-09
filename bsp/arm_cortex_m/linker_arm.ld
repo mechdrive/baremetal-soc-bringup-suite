@@ -86,3 +86,4 @@ SECTIONS
         *(.ARM.exidx*)
     }
 }
+

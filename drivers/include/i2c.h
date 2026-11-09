@@ -98,3 +98,4 @@ void i2c_bus_recovery_sequence(uintptr_t scl_gpio_base, uint8_t scl_pin,
 #endif
 
 #endif /* I2C_H */
+

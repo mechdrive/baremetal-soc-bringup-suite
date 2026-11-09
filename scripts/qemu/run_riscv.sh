@@ -24,3 +24,4 @@ qemu-system-riscv32 \
     -nographic \
     -serial mon:stdio \
     -kernel "$ELF_IMAGE"
+

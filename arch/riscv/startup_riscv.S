@@ -113,3 +113,4 @@ trap_vector_entry:
     mret
 
     .size trap_vector_entry, .-trap_vector_entry
+

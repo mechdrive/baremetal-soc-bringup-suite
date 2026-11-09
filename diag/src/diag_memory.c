@@ -299,3 +299,4 @@ void diag_memory_register_all(void)
     };
     bringup_register_test(&tc5);
 }
+

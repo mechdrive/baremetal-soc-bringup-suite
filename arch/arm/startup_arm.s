@@ -176,3 +176,4 @@ g_pfnVectors:
 
     .weak WDT_IRQHandler
     .thumb_set WDT_IRQHandler,Default_Handler
+

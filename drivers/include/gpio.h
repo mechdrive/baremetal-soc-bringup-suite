@@ -96,3 +96,4 @@ uint32_t gpio_read_port(uintptr_t port_base);
 #endif
 
 #endif /* GPIO_H */
+

@@ -83,3 +83,4 @@ void arm_fault_handler_c(arm_exception_frame_t *frame, uint32_t lr_exc)
         __asm__ volatile ("bkpt #0");
     }
 }
+

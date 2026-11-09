@@ -113,3 +113,4 @@ void rcc_disable_peripheral_clock(uintptr_t base_addr, uint32_t bus_reg_offset, 
         mmio_clear_bits32(base_addr + bus_reg_offset, periph_mask);
     }
 }
+

@@ -236,3 +236,4 @@ void i2c_bus_recovery_sequence(uintptr_t scl_gpio_base, uint8_t scl_pin,
     gpio_write_pin(sda_gpio_base, sda_pin, true);
     delay_us(10);
 }
+

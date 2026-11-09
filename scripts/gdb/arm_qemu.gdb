@@ -46,3 +46,4 @@ end
 
 echo [GDB] Running target firmware to main()...\n
 continue
+

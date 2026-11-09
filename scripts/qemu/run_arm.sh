@@ -24,3 +24,4 @@ qemu-system-arm \
     -nographic \
     -serial mon:stdio \
     -kernel "$ELF_IMAGE"
+
